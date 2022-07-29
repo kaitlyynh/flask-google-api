@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <title>Welcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Find a Potty Site</h1>      
+    <p>
+        The purpose of Find a Potty is to locate public restrooms near you. 
+        Press get started to begin your journey. A map will appear, labeling various locations in your radius. 
+        Another map will show you the route to the closest public restroom available.
+    </p>
+  </div>
+  <div>
+    <iframe width="600" 
+    height="450" 
+    style="border:0" 
+    loading="lazy" 
+    allowfullscreen 
+    src="https://www.google.com/maps/embed/v1/directions?origin=place_id:{{place_id}}&destination=place_id:{{next_id}}&key={{key}}">
+    </iframe>
+    <p style="float: right; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+        Here is the closest public restroom in your area.
+    </p>
+   </div>
+   <img src="{{all_locations}}" alt="Image of all locations near you">
+</html>
