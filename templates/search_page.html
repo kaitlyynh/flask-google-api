@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Find a Potty - Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Find a Potty Site</h1>      
+    <p>
+        The purpose of Find a Potty is to locate public restrooms near you. 
+        Press get started to begin your journey. A map will appear, labeling various locations in your radius. 
+        Another map will show you the route to the closest public restroom available.
+    </p>
+  </div>
+    <div style="background-color: yellow;">  
+        <header>
+            Enter your search here
+        </header>
+        <br/>
+    </div>
+    <br/>
+    <form method="POST">
+        {{form.csrf_token}}
+        {{form.user_search.label()}}
+        {{form.user_search()}}
+        {{form.user_submit(class='btn btn-primary btn-lg')}}
+    </form>
+</html>
