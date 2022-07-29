@@ -8,9 +8,9 @@ import googlemaps
 pp = pprint.PrettyPrinter(indent=4)
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'AIzaSyADyb2Pcidfj5QFJr9WC3UJk8VPhGlAPbc'
+app.config['SECRET_KEY'] = 'YOUR_OWN_API_KEY'
 
-API_KEY= 'AIzaSyADyb2Pcidfj5QFJr9WC3UJk8VPhGlAPbc'
+API_KEY= 'YOUR_OWN_API_KEY'
 
 gmaps = googlemaps.Client(key=API_KEY)
 
